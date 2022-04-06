@@ -531,8 +531,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100%;
 }
 
-.max-w-\[30rem\] {
-  max-width: 30rem;
+.w-\[96\%\] {
+  width: 96%;
+}
+
+.w-\[95\%\] {
+  width: 95%;
 }
 
 .cursor-pointer {
@@ -563,6 +567,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
 .overflow-x-hidden {
   overflow-x: hidden;
 }
@@ -588,14 +598,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: transparent;
 }
 
-.bg-\[\#0f0c0d\] {
+.bg-\[\#4D408C\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(15 12 13 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#161113\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(22 17 19 / var(--tw-bg-opacity));
+  background-color: rgb(77 64 140 / var(--tw-bg-opacity));
 }
 
 .bg-transparent {
@@ -607,14 +612,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 
-.bg-red-600 {
+.bg-\[\#F0D61B\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
-}
-
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(240 214 27 / var(--tw-bg-opacity));
 }
 
 .px-1 {
@@ -630,11 +630,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-}
-
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
 }
 
 .py-3 {
@@ -678,12 +673,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 0.7rem;
 }
 
-.font-semibold {
-  font-weight: 600;
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .font-medium {
   font-weight: 500;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
 
 .tracking-wide {
@@ -736,7 +745,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 body {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Lato', sans-serif;
   /* font-family: 'Vazirmatn', sans-serif; */
   /* font-family: 'Prompt', sans-serif; */
   /* font-family: 'Inter', sans-serif; */
@@ -747,20 +756,16 @@ body {
 
 .subheading {
   /* font-family: 'Inter', sans-serif; */
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .heading {
   /* font-family: 'Roboto', sans-serif; */
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .call{
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .disclaimer {
-  font-family: 'Montserrat', sans-serif;
 }
 
 .rgba {
@@ -775,6 +780,7 @@ font-family: 'Changa', sans-serif;
 font-family: 'Dancing Script', cursive;
 font-family: 'Grape Nuts', cursive;
 font-family: 'Inter', sans-serif;
+font-family: 'Lato', sans-serif;
 font-family: 'Lobster', cursive;
 font-family: 'Merriweather', serif;
 font-family: 'Montserrat', sans-serif;
@@ -785,10 +791,20 @@ font-family: 'Roboto', sans-serif;
 font-family: 'Rubik Bubbles', cursive;
 font-family: 'Send Flowers', cursive;
 font-family: 'Tajawal', sans-serif;
-font-family: 'Vazirmatn', sans-serif; */
+font-family: 'Vazirmatn', sans-serif;*/
+
+.hover\:bg-\[\#e9dc75\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(233 220 117 / var(--tw-bg-opacity));
+}
 
 .hover\:bg-gradient-to-l:hover {
   background-image: linear-gradient(to left, var(--tw-gradient-stops));
+}
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .focus\:outline-none:focus {
@@ -822,8 +838,12 @@ font-family: 'Vazirmatn', sans-serif; */
     height: 100vh;
   }
 
-  .md\:w-\[30rem\] {
-    width: 30rem;
+  .md\:w-\[80\%\] {
+    width: 80%;
+  }
+
+  .md\:w-\[90\%\] {
+    width: 90%;
   }
 
   .md\:max-w-\[30rem\] {
@@ -872,14 +892,36 @@ font-family: 'Vazirmatn', sans-serif; */
     line-height: 1.75rem;
   }
 
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .md\:text-\[52px\] {
+    font-size: 52px;
+  }
+
   .md\:\[line-height\:1\.1\] {
     line-height: 1.1;
+  }
+
+  .md\:\[line-height\:1\.2\] {
+    line-height: 1.2;
+  }
+
+  .md\:\[line-height\:1\.3\] {
+    line-height: 1.3;
   }
 }
 
 @media (min-width: 1024px) {
-  .lg\:max-w-\[60rem\] {
-    max-width: 60rem;
+  .lg\:max-w-7xl {
+    max-width: 80rem;
   }
 }
 
