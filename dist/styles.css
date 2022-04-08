@@ -517,6 +517,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100vh;
 }
 
+.h-\[90vh\] {
+  height: 90vh;
+}
+
 .w-full {
   width: 100%;
 }
@@ -606,6 +610,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-\[\#F0D61B\] {
   --tw-bg-opacity: 1;
   background-color: rgb(240 214 27 / var(--tw-bg-opacity));
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .px-1 {
